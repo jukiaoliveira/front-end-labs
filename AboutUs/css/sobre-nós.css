@@ -1,6 +1,16 @@
+:root {
+    --color-base: #333;
+    --color-base-figure-background:ghostwhite;
+    --color-base-figure-border: #333;
+    --font-base: "Roboto", sans-serif;
+    --font-base-primary: "Roboto", sans-serif;
+    --font-base-secondary: "Roboto", sans-serif;
+}
+
 body {
-    color: #333333;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    color: var(--color-base);
+    font-family: var(--font-base), sans-serif;
+    font-weight: 300;
     margin-left: auto;
     margin-right: auto;
     width: 940px;
@@ -9,24 +19,28 @@ body {
 h1 {
     background-image: url(../img/sobre-background.jpg);
     padding: 10px;
+    font-family: var(--font-base-primary), sans-serif;
 }
 
 h2 {
-    border-bottom: 2px groove #333333;
+    border-bottom: 2px groove var(--color-base);
     margin-top: 30px;
+    font-family: var(--font-base-secondary), monospace;;
 }
 
 figure {
-    background-color: #F2EDED;
-    border: 1px solid #ccc;
+    background-color: var(--color-base-figure-background);
+    border: 1px solid var(--color-base-figure-border);
     text-align: center;
     padding: 15px;
     margin: 30px;
 }
 
 figcaption {
-    font-style: italic;
+    font-style: bold;
     margin-top: 10px;
+    font-family: "Monsieur La Doulaise";
+    font-size: 50px;
 }
 
 p {
