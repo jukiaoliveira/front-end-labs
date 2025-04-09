@@ -1,0 +1,28 @@
+* {
+ padding: 0;
+ margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+div {
+    margin: 50px;
+    border: 2px;
+    background-color: rgb(253, 251, 248);
+}
+
+div p {
+    color: black;
+}
+
+button {
+    color: rgb(78, 78, 245);
+    border-color: rgb(78, 78, 245);
+}
+
+.valor {
+    font-size: 50px;
+}
