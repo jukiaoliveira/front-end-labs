@@ -1,45 +1,90 @@
-#container {
-  margin: 0 400px;
+:root {
+  --primary-color: #202298;
+  --secondary-color: #e1551d;
+  --background-color: #F9F9F9;
+  --text-button-color: white;
+  --font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --font-size-medium: medium;
+  --font-size-large: large;
 }
 
-header {
-  border-bottom: 1px solid #000;
+.flex-container {
+  display: flex;
+  flex-direction: column;
 }
 
-header img {
-  float: right;
-  margin-top: -110px;
-}
-
-header h2 {
-  margin-top: -10px;
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  font-family: var(--font-family);
 }
 
 fieldset {
-  background: #e2e0c7c4;
+  margin-bottom: 10px;
+  background-color: var(--background-color);
+  border-radius: 5px;
 }
 
 fieldset legend {
-  font-weight: 900;
-  margin-top: 10px;
+  font-weight: bold;
 }
 
-fieldset input {
-  width: 100%;
+fieldset input, select {
+  font-size: var(--font-size-medium);
 }
 
-button#cancel {
-  width: 150px;
-  margin-left: 20px;
-  margin-top: 10px;
-  margin-right: 10px;
-  background: rgb(238, 29, 29);
+.grid-button-container {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 5px 0;
+  border-bottom: black 5px solid;
 }
 
-button#enviar {
-  width: 150px;
-  margin-top: 10px;
-  margin-left: 0;
-  float: right;
-  background: rgb(36, 173, 24);
+.grid-button-container input {
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+  color: var(--text-button-color);
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.grid-button-container input[type=submit] {
+  background-color: var(--primary-color);
+}
+
+.grid-button-container input[type=reset] {
+  background-color: var(--secondary-color);
+}
+
+.grid-button-container input:focus{
+  outline: 2px solid black;
+}
+
+.grid-header-container {
+  display: grid;
+  grid-template-areas: 'top-left top-right';
+  border-bottom: black 5px solid;
+  margin-bottom: 5px;
+}
+
+.top-left {
+  grid-area: top-left;
+  justify-self: left;
+}
+
+.top-right {
+  grid-area: top-right;
+  justify-self: right;
+}
+
+i {
+  vertical-align: middle;
+}
+
+h1, h2 {
+  font-size: var(--font-size-large);
 }
