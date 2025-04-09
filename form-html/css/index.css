@@ -1,35 +1,45 @@
-/* CSS Reset Mínimo - Remove completamente estilos padrão do navegador */
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+#container {
+  margin: 0 400px;
 }
 
-html {
-  scroll-behavior: smooth;
+header {
+  border-bottom: 1px solid #000;
 }
 
-body {
-  min-height: 100vh;
-  font-family: sans-serif;
-  line-height: 1.5;
+header img {
+  float: right;
+  margin-top: -110px;
 }
 
-img,
-video {
-  max-width: 100%;
-  display: block;
+header h2 {
+  margin-top: -10px;
 }
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
+fieldset {
+  background: #e2e0c7c4;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+fieldset legend {
+  font-weight: 900;
+  margin-top: 10px;
+}
+
+fieldset input {
+  width: 100%;
+}
+
+button#cancel {
+  width: 150px;
+  margin-left: 20px;
+  margin-top: 10px;
+  margin-right: 10px;
+  background: rgb(238, 29, 29);
+}
+
+button#enviar {
+  width: 150px;
+  margin-top: 10px;
+  margin-left: 0;
+  float: right;
+  background: rgb(36, 173, 24);
 }
