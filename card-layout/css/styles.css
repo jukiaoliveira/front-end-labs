@@ -1,94 +1,128 @@
 /* Reset básico */
+:root {
+  --color-primary: #007bff;
+  --color-background: #eaf4ff;
+  --color-text: #333;
+  --color-light: #fff;
+  --color-alert: #ffca28;
+
+  --font-main: "Poppins", sans-serif;
+
+  --card-width: 300px;
+  --card-padding: 40px;
+  --card-height: 540px;
+}
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-  }
-  
-  body {
-    background-color: #eaf4ff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 100vh;
-    gap: 2rem;
-    padding: 2rem;
-  }
-  
-  .card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    width: 280px;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-  }
-  
-  .card h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .card var {
-    display: block;
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 1.5rem;
-  }
-  
-  .card var abbr {
-    text-decoration: none;
-  }
-  
-  .card var small {
-    font-size: 0.9rem;
-    color: #666;
-  }
-  
-  .card ul {
-    list-style: none;
-    text-align: left;
-    margin-bottom: 1.5rem;
-  }
-  
-  .card li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.8rem;
-  }
-  
-  .card li i {
-    color: #007bff;
-    margin-right: 0.5rem;
-    font-size: 1.2rem;
-  }
-  
-  .card button {
-    background-color: #fff;
-    color: #007bff;
-    border: 2px solid #007bff;
-    border-radius: 5px;
-    padding: 0.6rem 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .card button:hover {
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .card:nth-child(2) {
-    border: 2px solid #ffca28;
-    box-shadow: 0 0 0 4px #fff, 0 0 10px rgba(255, 202, 40, 0.5);
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+}
+
+body {
+  background-color: var(--color-background);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  gap: 20px;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  background-color: var(--color-light);
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: var(--card-padding);
+  width: var(--card-width);
+  text-align: center;
+  font-size: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.10);
+}
+
+.card h2 {
+  text-shadow: 1px 1px 2px gray;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.card var {
+  display: block;
+  font-weight: 400px;
+  font-size: 50px;
+  font-style: normal;
+  color: var(--color-primary);
+  margin-bottom: 10px;
+  transition: font-size 0.3s ease;
+}
+
+.card var:hover {
+  font-size: 60px;
+}
+
+.card var abbr {
+  text-decoration: none;
+  cursor: help;
+}
+
+.card var small {
+  font-size: 14px;
+  color: #666;
+}
+
+.card ul {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.card li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  padding: 0;
+  margin-top: 0;
+}
+
+.card li i {
+  color: var(--color-primary);
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+ul > li:first-child {
+  font-weight: 500;
+}
+
+.card button {
+  background-color: var(--color-light);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  padding: 0.6rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.card button:hover {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+.card:nth-child(2) {
+  border: 2px solid var(--color-alert);
+  box-shadow: 0 0 0 4px #fff, 0 0 10px rgba(255, 202, 40, 0.5);
+}
