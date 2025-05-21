@@ -1,5 +1,12 @@
-let nome = "Jukia";
-let idade = 25;
-alert("Boa noite, " + nome + "! Seja bem-vindo ao nosso site! Você tem " + idade + " anos?");
+const linkExterno = document.querySelector('a[title="Google Maps"]');
 
+//linkExterno.onclick = () => {
+//  alert("Você será redirecionado para um link externo.");
+//};
 
+linkExterno.addEventListener("click", (e) => {
+  const option = confirm("VocÊ será redirecionado para um link");
+  if (option === false) {
+    e.preventDefault();
+  }
+});
