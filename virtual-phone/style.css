@@ -63,9 +63,11 @@ input[type=tel] {
 }
 
 .icon {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 2.0rem;
     color: cornsilk;
+    margin-bottom: 10px;
 }
