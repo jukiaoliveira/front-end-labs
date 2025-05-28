@@ -6,7 +6,7 @@ function valorTeclasToDisplay(i) {
     if (display.value.length <= 14) { 
         display.value += teclas[i].value;
     } else {
-        alert("PARA DE DIGITAR PORRA!!!!");
+        alert("Chegou no limite de digitos!");
     }
 }
 
@@ -19,7 +19,7 @@ for (let i = 0; i < teclas.length; i++) {
 
 // Evento para limpar o display
 limpar.onclick = () => {
-    const opcao = confirm("SEU BURRO, DESEJA LIMPAR O DISPLAY?, TEM CERTEZA?");
+    const opcao = confirm("Tem certeza que deseja limpar o display?");
     if (opcao) {
         display.value = '';
     }
