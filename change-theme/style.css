@@ -15,6 +15,12 @@
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     transition: all 0.3s ease;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .light-theme {
@@ -27,10 +33,21 @@ body {
     color: var(--dark-text);
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
 .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 button {
@@ -39,6 +56,10 @@ button {
     border: none;
     cursor: pointer;
     font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
 }
 
 .card {
@@ -47,6 +68,12 @@ button {
     box-shadow: 0 2px 10px var(--light-shadow);
     margin-top: 2rem;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
 }
 
 .light-theme .card {
